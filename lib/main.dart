@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:onboard_animation/components/Screen/authscreen/splash_screen.dart';
 import 'package:onboard_animation/onboarding_screen.dart';
 
 void main() {
@@ -31,7 +32,7 @@ class MedicalApp extends StatelessWidget {
         ),
       ),
       ),
-      home: const OnboardingScreen(),
+      home: const SplashScreen(),
     );
   }
 }
