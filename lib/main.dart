@@ -9,7 +9,6 @@ void main() {
 
 class MedicalApp extends StatelessWidget {
   const MedicalApp({super.key});
-
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
