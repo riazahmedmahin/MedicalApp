@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:onboard_animation/components/Screen/authscreen/splash_screen.dart';
-import 'package:onboard_animation/onboarding_screen.dart';
+import 'package:onboard_animation/components/Screen/splash&onboardingScreen/splash_screen.dart';
 
 void main() {
   runApp(const MedicalApp());
