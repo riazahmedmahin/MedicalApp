@@ -19,6 +19,12 @@ class _TextFieldWithSortIconState extends State<TextFieldWithSortIcon> {
   List<String> _previousSearches = []; // List to store previous search terms
   bool _showPreviousSearches = false; // Flag to control when to show previous searches
 
+  @override
+  void dispose() {
+    _controller.dispose(); // Dispose of the controller to avoid memory leaks
+    super.dispose();
+  }
+
   void _onSearchChanged(String query) {
     // Update the suggestions based on the query
     if (query.isNotEmpty) {
@@ -144,9 +150,9 @@ class _TextFieldWithSortIconState extends State<TextFieldWithSortIcon> {
               ),
               // Cancel Button
               Align(
-                alignment: Alignment.centerRight, // Align it to the right
+                alignment: Alignment.topRight, // Align it to the right
                 child: Padding(
-                  padding: const EdgeInsets.only(right: 16.0, top: 8.0),
+                  padding: const EdgeInsets.only(right: 6.0, bottom: 8.0),
                   child: IconButton(
                     icon: Icon(Icons.cancel, color: Colors.red), // Cancel icon
                     onPressed: _onCancelPressed, // Close the previous searches list

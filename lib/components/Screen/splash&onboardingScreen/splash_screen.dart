@@ -34,11 +34,11 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Spacer(),
             //Image.asset("assets/applogo.png"),
-            Text("Doctify",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w900,color: Colors.white),),
+            Text("Doctify",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w800,color: Colors.white),),
             Spacer(),
             //CircularProgressIndicator(),
             SizedBox(height: 16),
-            SizedBox(height: 16),
+            
           ],
         ),
       ),

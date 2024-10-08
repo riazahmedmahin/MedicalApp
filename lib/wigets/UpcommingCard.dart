@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DoctorCard extends StatelessWidget {
-  const DoctorCard({Key? key}) : super(key: key);
+class Upcommingcard extends StatelessWidget {
+  const Upcommingcard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,10 +30,10 @@ class DoctorCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left:10),
+                    padding: const EdgeInsets.only(left:8),
                     child: CircleAvatar(
                       radius: 25,
-                      backgroundImage: NetworkImage('https://plus.unsplash.com/premium_photo-1658506671316-0b293df7c72b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZG9jdG9yfGVufDB8fDB8fHww'),
+                      backgroundImage: NetworkImage('https://cdn-icons-png.flaticon.com/128/2785/2785482.png'),
                       //backgroundColor: Colors.white,
                     ),
                   ),
@@ -41,7 +41,7 @@ class DoctorCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
-                      Text('Dr. palmanicham',
+                      Text('Dr. Ariful Islam',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -55,12 +55,12 @@ class DoctorCard extends StatelessWidget {
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(right:10),
+                    padding: const EdgeInsets.only(right:10,bottom: 15),
                     child: Container(
                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(12),
+                        borderRadius: BorderRadius.circular(10),
                       ),
                       child: Row(
                         children: const [

@@ -12,26 +12,43 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () => Navigator.of(context).pop(),
+        leading:  Padding(
+        padding: const EdgeInsets.only(left: 8.0, top: 8, bottom: 5, right: 8),
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(),
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: InkWell(
+            onTap: () => Navigator.pop(context),
+            child: Icon(
+              Icons.arrow_back,
+              size: 20,
+            ),
+          ),
         ),
+      ),
         //backgroundColor: Colors.white,
         elevation: 0,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15.0,vertical: 12),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            SizedBox(height: 20,),
             Container(
-              height: 130,width: 130,
+              height: 200,width: 200,
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 206, 216, 244),
                 shape: BoxShape.circle,
                 
               ),
-              child: Icon(Icons.lock_outline_rounded, size: 50, color: Colors.blue)),
+              child: Image.network("https://cdn-icons-png.flaticon.com/128/1000/1000948.png",
+              width: 10,
+              height: 10,
+              
+              )
+              ),
             SizedBox(height: 30),
             Text(
               "Please Enter Your Email to Receive a Verification Code",
@@ -42,7 +59,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                 color: Colors.black54,
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 50),
             TextField(
               controller: _emailController,
               decoration: InputDecoration(
@@ -51,16 +68,16 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               ),
               keyboardType: TextInputType.emailAddress,
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 30),
            
-            SizedBox(height: 20),
+         
             ElevatedButton(
               onPressed: () {
                 // Implement sending functionality
               },
               child: Text('Send'),
               style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(horizontal: 155, vertical: 15),
+                padding: EdgeInsets.symmetric(horizontal: 175, vertical: 15),
               ),
             ),
           ],
